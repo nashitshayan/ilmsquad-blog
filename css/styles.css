@@ -1,2 +1,121 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+/* colors */
+:root {
+    --primary-color: #14213d;
+    --font-color: #e5e5e5;
+    --time: 0.707s
+}
+/* body */
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    padding: 0;
+    margin: 0 ;
+}
+
+/* nav */
+
+.nav {
+    background-color: var(--primary-color);
+}
+
+.nav-items {
+    text-align: right;
+ }
+.nav-items a{
+   
+    color: var(--font-color);
+}
+
+/* images */
+
+.logo-img{
+    width: 100px;
+    padding: 1rem;
+    
+}
+
+/* links */
+
+.link {
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+   
+}
+
+.link:hover{
+    font-weight: bold;
+}
 
 
+.link-primary {
+background-color: var(--primary-color);
+border-radius: 0.5rem;
+max-width: 140px;
+color: white;
+
+}
+.link-secondary {
+    color: var(--primary-color);
+    border-radius: 0.5rem;
+    max-width: 140px;
+    border: 1px solid var(--font-color);
+    
+}
+
+.link-secondary:hover{
+    background-color: var(--font-color);
+}
+.card .link {
+    display: block;
+}
+
+/* lists */
+.list-non-bullet {
+    list-style: none;
+
+}
+.list-item-inline {
+    display: inline;
+}
+ul a{
+    display: inline;
+}
+
+/* sections */
+
+.section {
+   
+    background-color:wheat;
+    padding: 10rem;
+    
+    text-align: center;
+}
+
+
+
+/* cards */
+
+
+
+.card {
+    width: 200px;
+    height: 250px;
+    background-color: var(--primary-color);
+    color:var(--font-color);
+    padding: 3rem;
+    text-align: center;
+    border-radius: 3rem;
+}
+
+
+
+/* footer */
+
+.footer {
+    background-color: var(--primary-color);
+    color: var(--font-color);
+}
