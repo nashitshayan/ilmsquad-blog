@@ -136,9 +136,14 @@ ul {
     text-align: center;
 } */
 .section {
-    padding: 12rem 8rem;
-    margin: 5rem;
+    /* padding: 12rem 8rem;
+    margin: 5rem; */
     background-color: var(--bg-s1);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+    padding: 5rem 0;
 }
 .section h1{
     text-align: center;
@@ -223,7 +228,7 @@ ul {
 
 /* footer */
 
-.footer {
+#footer {
     background-color: var(--bg-nav);
     color: var(--font-color);
     padding: 2rem;
@@ -234,13 +239,29 @@ ul {
 .footer-header {
     font-size: 1.1rem;
 }
-.footer .social-link {
+#footer .social-link {
     margin: 0.75rem;
     color:var(--font-color);
 }
 .social-links {
     margin: 1rem;
 }
+
+
+
+/* content */
+
+.content {
+    background-color: var(--bg-s2);
+    padding: 3rem;
+    margin: 1rem 2rem;
+}
+
+
+
+
+
+
 
 
 /* media queries */
@@ -253,6 +274,11 @@ ul {
 
 
     }
+    .section {
+        margin: 3rem;
+        padding: 5rem 0;
+    }
+   
 }
 @media(min-width: 481px) and (max-width: 767px)
 {
@@ -260,6 +286,7 @@ ul {
         grid-template-columns: 1fr 1fr;
         margin: 1rem 2rem;
     }
+  
 }
 
 @media(min-width: 768px) and (max-width: 1024px)
@@ -268,11 +295,19 @@ ul {
         grid-template-columns: 1fr 1fr 1fr;
         margin: 2rem 4rem;
     }
+    .section {
+        margin: 5rem;
+        padding: 10rem 0;
+    }
 }
 @media(min-width: 1025px)
 {
     .cards{
         grid-template-columns: 1fr  1fr 1fr;
         margin: 4rem 8rem;
+    }
+    .section {
+        margin: 6rem 8rem;
+        padding: 15rem 0;
     }
 }
