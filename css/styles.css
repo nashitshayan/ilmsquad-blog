@@ -99,6 +99,17 @@ margin-bottom: 0.5rem;
     display: block;
 }
 
+
+.link-main {
+    color: var(--font-color);
+}
+.link-main:hover section{
+    background-color: var(--bg-s2);
+}
+
+
+
+
 /* lists */
 .list-non-bullet {
     list-style: none;
