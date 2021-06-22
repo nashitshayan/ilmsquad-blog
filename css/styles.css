@@ -1,15 +1,17 @@
 /* font */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;900&display=swap');
 
 /* colors */
 :root {
     --primary-color: #14213d;
-    --font-color: black;
+    --font-color: #c5fe00;
     --time: 0.707s;
-    --bg-main: #caf0f8;
-    --bg-nav: #48cae4; 
-    --bg-s1: #8EE3F5;
-    --bg-s2: #A8E0FF;  
+    --bg-main: #282828;
+    --bg-nav: #212121; 
+    --bg-s1: #212121;
+    --bg-s2: #000;  
+   
     
 }
 /* body */
@@ -17,7 +19,7 @@
 body {
     background-color: var(--bg-main);
     box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     margin: 0;
     padding: 0; 
 }
@@ -65,11 +67,13 @@ body {
 }
 
 .link-active {
-    font-weight: bold;
+    font-weight: 600;
+    letter-spacing: .03em;
 }
 
 .link:hover{
     font-weight: bold;
+    letter-spacing: .03em;
 }
 
 
@@ -142,11 +146,18 @@ ul {
     display: grid;
     justify-content: center;
     align-items: center;
-    margin: 3rem;
+    
     padding: 5rem 0;
+}
+.main-div {
+    margin: 3rem 2rem;
 }
 .section h1{
     text-align: center;
+    font-size: 900;
+    letter-spacing: .1em;
+    font-size: 6vh;
+    padding: 1rem;
     }
 
 /* .s1 {
@@ -232,6 +243,10 @@ ul {
     background-color: var(--bg-nav);
     color: var(--font-color);
     padding: 2rem;
+    /* position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%; */
     text-align: center;    
     border-top-right-radius: 2rem;
 }
@@ -274,8 +289,11 @@ ul {
 
 
     }
-    .section {
+    .main-div {
         margin: 3rem;
+        
+    }
+    .section{
         padding: 5rem 0;
     }
    
@@ -286,6 +304,9 @@ ul {
         grid-template-columns: 1fr 1fr;
         margin: 1rem 2rem;
     }
+    /* .section h1 {
+
+    } */
   
 }
 
@@ -295,8 +316,12 @@ ul {
         grid-template-columns: 1fr 1fr 1fr;
         margin: 2rem 4rem;
     }
-    .section {
+    .main-div {
         margin: 5rem;
+        
+    }
+    .section {
+        
         padding: 10rem 0;
     }
 }
@@ -305,9 +330,13 @@ ul {
     .cards{
         grid-template-columns: 1fr  1fr 1fr;
         margin: 4rem 8rem;
+    } 
+    .main-div {
+        margin: 6rem 8rem;
+        
     }
     .section {
-        margin: 6rem 8rem;
+       
         padding: 15rem 0;
     }
 }
