@@ -2,6 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;900&display=swap');
 
+
+@font-face {
+    font-family: "Futura PT";
+    src: url("/fonts/FuturaPTBook.otf") format("otf");
+}
+
+p {
+    font-family: Futura PT;
+}
+
+
 /* colors */
 :root {
     --primary-color: #E2fe98;
