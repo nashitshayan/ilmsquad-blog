@@ -106,11 +106,22 @@ body {
     letter-spacing: .03em;
 }
 
-.link:hover {
-   /* color: #d8fc6f; */
-   color: var(--font-2);
+ .link:hover, .link-primary:hover, .link-secondary:hover, .social-link:hover {
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
 }
 
+
+.link:hover {
+   /* color: #d8fc6f; */
+  animation-name: hover-link;
+}
+
+@keyframes hover-link {
+    100% {
+        color: var(--font-2);
+    }
+}
 
 
 .link-primary,
@@ -134,15 +145,33 @@ body {
 }
 
 .link-secondary:hover {
-    background-color: var(--bg-s2);
+    animation-name: hover-link-secondary;
     color: white;
     border: 1px solid var(--font-2);
 }
 
+@keyframes hover-link-secondary {
+    100% {
+        background-color: var(--bg-s2);
+    }
+}
+
+
+
 .link-primary:hover {
     color: black;
-    background-color: var(--font-2);
+    animation-name: hover-link-primary;
+   
 }
+
+@keyframes hover-link-primary {
+    100% {
+        background-color: var(--font-2);
+    }
+}
+
+
+
 .card .link {
     display: block;
 }
@@ -154,8 +183,18 @@ body {
 }
 
 .link-main:hover section {
-    background-color: var(--bg-s2);
+    animation-name: hover-link-main;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
     color: white;
+    
+   
+}
+@keyframes hover-link-main {
+    100% {
+        background-color: var(--bg-s2);
+       
+    }
 }
 
 
@@ -334,7 +373,13 @@ ul {
 }
 
 #footer .social-link:hover {
-    color: var(--font-2);
+   animation-name: hover-social-link;
+}
+@keyframes hover-social-link {
+    100% {
+        color: var(--font-2);
+       
+    }
 }
 
 
