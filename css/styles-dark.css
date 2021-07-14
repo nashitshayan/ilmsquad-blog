@@ -1,7 +1,7 @@
 /* font */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
 @font-face {
     font-family: "Futura PT";
@@ -9,7 +9,7 @@
 }
 
 p {
-    font-family: Futura PT;
+    font-family: var(--para);
 }
 
 
@@ -24,8 +24,178 @@ p {
     --bg-s1: #212121; */
     --bg-s2: #191919;
     --font-2: #c5fe00;
+    --ff-quote: 'Source Code Pro', monospace;
+    --para: "Futura PT";
 
 }
+
+/* Welcome Page  */
+
+#welcome-wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-main);
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+}
+
+.divide {
+    box-sizing: border-box;
+    background-color: var(--bg-s2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid var(--primary-color);
+    border-left: 1px solid var(--primary-color);
+
+    border-bottom-left-radius: 2rem;
+
+}
+.divide div {
+    padding-bottom: 0.5rem;
+}
+
+.divide-1 {
+    background-color:  var(--bg-main);
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.block {
+    font-family: 'Work Sans', sans-serif;
+    /* border: 1px solid black; */
+    background-color: var(--bg-s2);
+    border: 1px solid var(--primary-color);
+    border-radius: 2rem;
+    padding: 3rem;
+    margin: 2rem 1rem;
+}
+
+.block h3 {
+    font-weight: normal;
+    padding-bottom: .5rem;
+}
+
+
+#welcome-quote {
+    font-family: var(--ff-quote);
+    font-size: 1.2rem;
+}
+
+#btn-welcome {
+    font-family: var(--ff-quote);
+    background-color: var(--primary-color);
+    color: var(--bg-main);
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    text-decoration: none;
+}
+
+#btn-welcome:hover {
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-name: hover-btn-welcome;
+}
+
+
+@keyframes hover-btn-welcome {
+    100% {
+        background-color: var(--font-2);
+    }
+}
+
+
+/* form  */
+
+#logo-img {
+    display: block;
+    width: 20wh;
+    height: 20vh;
+    margin: auto;
+    padding: 2rem;
+}
+
+/* @media screen and (min-width: 767px){
+    body {
+  
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+       }
+       #form-main{
+        width: 60%;
+    }
+        main {
+          
+            max-width: 600px;
+            
+        }
+} */
+
+form {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#survey-form {
+    background-color: var(--bg-s2);
+    padding: 3rem;
+    color: white;
+    font-size: 1.3rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"]{
+    margin: .3rem 0 2rem 0;
+    padding: .7rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+input[type="radio"], input[type="checkbox"]{
+    height: 20px;
+    width: 20px;
+    float: left;
+    margin: .25rem .5rem 0 0;
+ }
+ .radio-div, .checkbox-div {
+ margin: .75rem 0 .5rem 0;
+ }
+ #radio-wrap, #checkbox-wrap {
+   margin-bottom: 2rem;
+ }
+
+ #submit {
+    padding: 1rem;
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--bg-s2);
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+#submit:hover {
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-name: hover-submit;
+}
+
+
+@keyframes hover-submit {
+    100% {
+        background-color: var(--font-2);
+    }
+}
+
+
+
 
 /* body */
 
@@ -106,15 +276,18 @@ body {
     letter-spacing: .03em;
 }
 
- .link:hover, .link-primary:hover, .link-secondary:hover, .social-link:hover {
+.link:hover,
+.link-primary:hover,
+.link-secondary:hover,
+.social-link:hover {
     animation-duration: 500ms;
     animation-fill-mode: forwards;
 }
 
 
 .link:hover {
-   /* color: #d8fc6f; */
-  animation-name: hover-link;
+    /* color: #d8fc6f; */
+    animation-name: hover-link;
 }
 
 @keyframes hover-link {
@@ -161,7 +334,7 @@ body {
 .link-primary:hover {
     color: black;
     animation-name: hover-link-primary;
-   
+
 }
 
 @keyframes hover-link-primary {
@@ -187,13 +360,14 @@ body {
     animation-duration: 500ms;
     animation-fill-mode: forwards;
     color: white;
-    
-   
+
+
 }
+
 @keyframes hover-link-main {
     100% {
         background-color: var(--bg-s2);
-       
+
     }
 }
 
@@ -335,6 +509,7 @@ ul {
     letter-spacing: 0.07rem;
     font-weight: normal;
 }
+
 /* 
 .card:hover {
     background-color: var(--bg-s2);
@@ -373,12 +548,13 @@ ul {
 }
 
 #footer .social-link:hover {
-   animation-name: hover-social-link;
+    animation-name: hover-social-link;
 }
+
 @keyframes hover-social-link {
     100% {
         color: var(--font-2);
-       
+
     }
 }
 
@@ -395,7 +571,7 @@ ul {
     /* opacity: 87%; */
 }
 
-.content a{
+.content a {
     color: var(--secondary-color)
 }
 
