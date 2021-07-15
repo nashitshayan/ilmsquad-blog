@@ -50,9 +50,41 @@
                         <label for="radio">No</label>
                     </div>
                 </div>
-                <button id="submit">Submit</button>
+                <button onclick="sendForm()" id="submit">Submit</button>
         </form>
     </main>
+
+
+
+    <script>
+        $.ajax({
+        url:'https://api.apispreadsheets.com/data/410/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          alert("Form Data Submitted :)")
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+    });
+
+    onclick = sendForm(){
+$.ajax({
+        url:'https://api.apispreadsheets.com/data/410/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          alert("Form Data Submitted :)")
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+    });
+    }
+
+
+    </script>
 </body>
 
 </html>
