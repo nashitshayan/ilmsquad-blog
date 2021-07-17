@@ -139,14 +139,19 @@ form {
     flex-flow: column nowrap;
 }
 
-#survey-form {
+
+
+.outer {
     box-sizing: border-box;
     background-color: var(--bg-s2);
     border: 1px solid var(--primary-color);
-    padding: 3rem;
+    padding: 3rem 3rem 0 3rem;
     color: white;
     font-size: 1.3rem;
 }
+
+
+
 
 input[type="text"],
 input[type="email"],
@@ -170,6 +175,7 @@ input[type="radio"], input[type="checkbox"]{
  }
 
  #submit {
+     width: 100%;
     padding: 1rem;
     background-color: var(--primary-color);
     border: none;

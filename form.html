@@ -7,84 +7,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome form</title>
     <link rel="stylesheet" href="/css/form.css">
+    
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/15519/",
+				type:"post",
+				data:$("#survey-form").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+    
 </head>
 
 <body>
 
+    
+
     <main id="form-main">
         <header id="header">
-           <img src="/images/brand-logo.png" alt="" id="logo-img">
+            <img src="/images/brand-logo.png" alt="" id="logo-img">
         </header>
 
-        <form action="#" id="survey-form">
+        <div class="outer">
+            <form  id="survey-form">
 
-            <label for="name">Name</label>
-
-            <input type="text" id="name" placeholder="Enter your name" required>
-            <label for="kunyah">Kunyah</label>
-
-            <input type="text" id="kunyah" placeholder="Enter your Kunyah" required>
-            <label for="email-label" id="email-label">Email</label>
-            <input type="email" id="email" placeholder="Enter your email" required
-                pattern="^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$">
-
+                <label >Name</label>
+                <input name="name" type="text" id="name" placeholder="Enter your name" required>
+    
+                <label for="kunyah">Kunyah</label>
+    
+                <input name="kunyah" type="text" id="kunyah" placeholder="Enter your Kunyah" required>
+                
+                <label for="email-label" id="email-label">Email</label>
+                <input name="email" type="email" id="email" placeholder="Enter your email" required
+                    pattern="^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$">
+    
+               
                 <label for="radio">Choose a language </label>
-                <div id="radio-wrap">
-                    <div class="radio-div">
-                        <input type="radio" id="radio" name="language" value="Urdu">
-                        <label for="radio">Urdu</label>
+                    <div id="radio-wrap">
+                        <div class="radio-div">
+                            <input type="radio" name="language" id="lang-op" value="Urdu">
+                            <label for="radio">Urdu</label>
+                        </div>
+                        <div class="radio-div">
+                            <input type="radio" name="language"id="lang-op" value="English">
+                            <label for="radio">English</label>
+                        </div>
                     </div>
-                    <div class="radio-div">
-                        <input type="radio" id="radio" name="language" value="English">
-                        <label for="radio">English</label>
-                    </div>
-                </div>
                 <label for="radio">If you chose Urdu, can you read it?</label>
-                <div id="radio-wrap">
-                    <div class="radio-div">
-                        <input type="radio" id="radio" name="urdu" value="Yes">
-                        <label for="radio">Yes</label>
+                    <div id="radio-wrap">
+                        <div class="radio-div">
+                            <input type="radio"  id="urdu-op" name="readUrdu"value="Yes">
+                            <label for="radio">Yes</label>
+                        </div>
+                        <div class="radio-div">
+                            <input type="radio"  name="readUrdu"  id="urdu-op" value="No">
+                            <label for="radio">No</label>
+                        </div>
                     </div>
-                    <div class="radio-div">
-                        <input type="radio" id="radio" name="urdu" value="No">
-                        <label for="radio">No</label>
-                    </div>
-                </div>
-                <button onclick="sendForm()" id="submit">Submit</button>
-        </form>
+              
+            </form>
+            <button  onclick='SubForm()' id="submit">Submit</button>
+        </div>
     </main>
+  
 
 
-
-    <script>
-        $.ajax({
-        url:'https://api.apispreadsheets.com/data/410/',
-        type:'post',
-        data:$("#myForm").serializeArray(),
-        success: function(){
-          alert("Form Data Submitted :)")
-        },
-        error: function(){
-          alert("There was an error :(")
-        }
-    });
-
-    onclick = sendForm(){
-$.ajax({
-        url:'https://api.apispreadsheets.com/data/410/',
-        type:'post',
-        data:$("#myForm").serializeArray(),
-        success: function(){
-          alert("Form Data Submitted :)")
-        },
-        error: function(){
-          alert("There was an error :(")
-        }
-    });
-    }
-
-
-    </script>
 </body>
 
 </html>
