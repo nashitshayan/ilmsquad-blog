@@ -13,7 +13,7 @@ p {
 }
 * {
     box-sizing: border-box;
-    
+    /* border: 1px solid red; */
 }
 
 /* colors */
@@ -501,7 +501,7 @@ ul {
     border: 1px solid var(--primary-color);
     border-radius: 2rem;
     font-weight: 400;
-    padding: 3rem 1.5rem;
+   
    
 }
 
