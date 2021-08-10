@@ -11,7 +11,10 @@
 p {
     font-family: var(--para);
 }
-
+* {
+    box-sizing: border-box;
+    
+}
 
 /* colors */
 :root {
@@ -481,11 +484,12 @@ ul {
     align-items: center;
 } */
 
-.cards {
+ .cards {
     
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1rem;
+    margin: 1rem;
 
 }
 .card-title h5, .card-title h3{
@@ -497,30 +501,34 @@ ul {
     border: 1px solid var(--primary-color);
     border-radius: 2rem;
     font-weight: 400;
-    margin: 3rem 1.5rem;
+    padding: 3rem 1.5rem;
    
 }
 
 .card-title{
+    
+    padding: 3rem 1rem;
     background-color: var(--primary-color);
     color: var(--bg-s2);
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
-    padding: 3rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.3rem;
-    text-align: center;
-    height: 15%;
-}
-
-.card-content{
-    padding: 2rem 0 3rem 0;
+    height: 9em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 1.3rem;
+    text-align: center;
+    
+}
+
+.card-content{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0 3rem 0;
 }
 
 .card-content h5{
@@ -532,15 +540,17 @@ ul {
      margin: 0.5rem 0 1rem 0;
      font-size: 1.2rem;
      font-weight: 400;
+     text-align: center;
  }
 .card-link{
     display: flex;
     margin: 1rem 0 1rem 0;
 }
 .card-link a{
-    margin: 0 0.5rem;
-    width: 7em;
+   margin: 0 0.5rem;
+
     text-align: center;
+    
 }
 
 /* 
@@ -620,7 +630,7 @@ ul {
 @media(max-width: 480px) {
     .cards {
         grid-template-columns: 1fr;
-        margin: 1rem;
+        /* margin: 1rem; */
 
 
     }
@@ -650,7 +660,7 @@ ul {
 
 @media(min-width: 768px) and (max-width: 1024px) {
     .cards {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         /* margin: 2rem 4rem; */
     }
 
