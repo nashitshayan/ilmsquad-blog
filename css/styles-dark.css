@@ -197,7 +197,48 @@ input[type="radio"], input[type="checkbox"]{
     }
 }
 
+/* language choosing page */
 
+#lang-wrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+
+}
+.lang-div{
+    width: 5em;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+text-decoration: none;
+border: 1px solid var(--primary-color);
+border-radius: 8px;
+   
+}
+
+
+.lang-div:hover{
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-name: hover-btn-lang;
+    color: var(--bg-s2);
+}
+
+
+@keyframes hover-btn-lang {
+    100% {
+        background-color: var(--font-2);
+    }
+}
+.inner-lang-wrapper{
+    display: flex;
+
+}
 
 
 /* body */
