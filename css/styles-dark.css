@@ -11,6 +11,7 @@
 p {
     font-family: var(--para);
 }
+
 * {
     box-sizing: border-box;
     /* border: 1px solid red; */
@@ -40,7 +41,7 @@ p {
     display: grid;
     grid-template-rows: 25vh auto;
     background-color: var(--bg-main);
-    
+
 }
 
 .divide {
@@ -57,12 +58,13 @@ p {
     border-bottom-left-radius: 2rem;
 
 }
+
 .divide div {
     padding-bottom: 0.5rem;
 }
 
 .divide-1 {
-    background-color:  var(--bg-main);
+    background-color: var(--bg-main);
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
@@ -157,26 +159,32 @@ form {
 
 input[type="text"],
 input[type="email"],
-input[type="number"]{
+input[type="number"] {
     margin: .3rem 0 2rem 0;
     padding: .7rem;
     border-radius: 5px;
     font-size: 1.1rem;
 }
-input[type="radio"], input[type="checkbox"]{
+
+input[type="radio"],
+input[type="checkbox"] {
     height: 20px;
     width: 20px;
     float: left;
     margin: .25rem .5rem 0 0;
- }
- .radio-div, .checkbox-div {
- margin: .75rem 0 .5rem 0;
- }
- #radio-wrap, #checkbox-wrap {
-   margin-bottom: 2rem;
- }
+}
 
- #submit {
+.radio-div,
+.checkbox-div {
+    margin: .75rem 0 .5rem 0;
+}
+
+#radio-wrap,
+#checkbox-wrap {
+    margin-bottom: 2rem;
+}
+
+#submit {
     padding: 1rem;
     background-color: var(--primary-color);
     border: none;
@@ -185,6 +193,7 @@ input[type="radio"], input[type="checkbox"]{
     font-weight: bold;
 
 }
+
 #submit:hover {
     animation-duration: 500ms;
     animation-fill-mode: forwards;
@@ -200,29 +209,33 @@ input[type="radio"], input[type="checkbox"]{
 
 /* language choosing page */
 
-#lang-wrapper{
+#lang-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: var(--primary-color);
+    margin-bottom: 3rem;
 
 }
-.lang-div{
+#lang-wrapper h1{
+    margin-bottom: 1.5rem;
+}
+.lang-div {
     width: 5em;
     padding: 1rem 0.5rem;
     text-align: center;
     margin: 0 1rem;
     font-size: 1.2rem;
     color: var(--primary-color);
-text-decoration: none;
-border: 1px solid var(--primary-color);
-border-radius: 8px;
-   
+    text-decoration: none;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+
 }
 
 
-.lang-div:hover{
+.lang-div:hover {
     animation-duration: 500ms;
     animation-fill-mode: forwards;
     animation-name: hover-btn-lang;
@@ -235,7 +248,8 @@ border-radius: 8px;
         background-color: var(--font-2);
     }
 }
-.inner-lang-wrapper{
+
+.inner-lang-wrapper {
     display: flex;
 
 }
@@ -276,7 +290,7 @@ body {
 
 .nav-brand {
     font-size: 2rem;
-    
+
     color: var(--primary-color);
 
 }
@@ -525,29 +539,31 @@ ul {
     align-items: center;
 } */
 
- .cards {
-    
+.cards {
+
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1rem;
     margin: 1rem;
 
 }
-.card-title h5, .card-title h3{
+
+.card-title h5,
+.card-title h3 {
     margin: 0;
     font-weight: 400;
 }
 
-.card{
+.card {
     border: 1px solid var(--primary-color);
     border-radius: 2rem;
     font-weight: 400;
-   
-   
+
+
 }
 
-.card-title{
-    
+.card-title {
+
     padding: 3rem 1rem;
     background-color: var(--primary-color);
     color: var(--bg-s2);
@@ -560,11 +576,11 @@ ul {
     justify-content: center;
     font-size: 1.3rem;
     text-align: center;
-    
+
 }
 
-.card-content{
-    
+.card-content {
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -572,26 +588,29 @@ ul {
     padding: 2rem 0 3rem 0;
 }
 
-.card-content h5{
+.card-content h5 {
     margin: 1rem 0 0 0;
     font-weight: 400;
- 
+
 }
- .card-content h4{
-     margin: 0.5rem 0 1rem 0;
-     font-size: 1.2rem;
-     font-weight: 400;
-     text-align: center;
- }
-.card-link{
+
+.card-content h4 {
+    margin: 0.5rem 0 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.card-link {
     display: flex;
     margin: 1rem 0 1rem 0;
 }
-.card-link a{
-   margin: 0 0.5rem;
+
+.card-link a {
+    margin: 0 0.5rem;
 
     text-align: center;
-    
+
 }
 
 /* 
@@ -612,7 +631,7 @@ ul {
     text-align: center;
     border-top-right-radius: 2rem;
     border-top: 1px solid var(--primary-color);
-   
+
 
 
 }
@@ -690,7 +709,7 @@ ul {
 @media(min-width: 481px) and (max-width: 767px) {
     .cards {
         grid-template-columns: 1fr;
-       
+
     }
 
     /* .section h1 {
